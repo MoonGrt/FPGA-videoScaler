@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../video_scaler2.srcs/sources_1/algorithm.v" \
+"../../../../video_scaler2.srcs/sources_1/color_bar.v" \
+"../../../../video_scaler2.srcs/sources_1/fifo2.v" \
+"../../../../video_scaler2.srcs/sources_1/image_cut.v" \
+"../../../../video_scaler2.srcs/sources_1/pixel_cnt.v" \
+"../../../../video_scaler2.srcs/sources_1/algorithm/ramDualPort.v" \
+"../../../../video_scaler2.srcs/sources_1/algorithm/ramFifo.v" \
+"../../../../video_scaler2.srcs/sources_1/algorithm/streamScaler.v" \
+"../../../../video_scaler2.srcs/sources_1/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
