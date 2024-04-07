@@ -47,6 +47,7 @@ module algorithm #(
     input wire                           de_i,
     input wire [DATA_WIDTH*CHANNELS-1:0] rgb_i,
     
+    output wire                          vs,
     output wire [DATA_WIDTH*CHANNELS-1:0] algorithm_data,
     output wire							   algorithm_dataValid
     
@@ -95,6 +96,14 @@ image_cut (
     .rgb_o   ( image_cut_rgb ),
     .state   ( state         )
 );
+
+reg vs_reg1, vs_reg2;
+assign  vs = vs_reg1&~vs_reg2;
+always @(posedge clk_2x)
+begin
+    vs_reg1 <= image_cut_vs;
+    vs_reg2 <= vs_reg1;
+end
 
 //fifo #(
 //    .DW(24),
@@ -173,7 +182,7 @@ streamScaler #(
     .dInValid   ( fifo1_dataValid ),
 //    .dInValid   ( scaler_re ),
     .nextDin    ( scaler_re ),
-    .start      ( image_cut_vs ),
+    .start      ( vs ),
     
     .dOut       ( scaler_data ),
     .dOutValid  ( scaler_dataValid ),
@@ -205,8 +214,7 @@ pixel_cnt pixel_cnt(
 );
 
 fill_brank#(
-    .H_DISP(H_DISP),
-    .INPUT_X_RES_WIDTH(INPUT_X_RES_WIDTH))
+    .H_DISP(H_DISP))
 fill_brank(
     .clk                (clk_2x),
     .data_i             (scaler_data),

@@ -15,7 +15,7 @@ reg clk = 0;
 reg clk_2x = 0;
 //reg clk_5x = 0;
 reg rst_n = 0;
-reg en = 0;
+reg en = 1;
 always #5   clk = ~clk;
 always #2.5 clk_2x = ~clk_2x;
 //always #1   clk_5x = ~clk_5x;
@@ -23,7 +23,7 @@ always #2.5 clk_2x = ~clk_2x;
 initial
 begin
     #100 rst_n = 1'b1;
-    #1000000 en = 1'b1;
+//    #100 en = 1'b1;
 end
 
 //video timing parameter definition
@@ -126,31 +126,37 @@ parameter OUTPUT_Y_RES_WIDTH  = 11;
 
 // algorithm Inputs
 //中间半屏放大一倍
-parameter START_X = H_DISP / 4;
-parameter START_Y = V_DISP / 4;
-parameter END_X = H_DISP * 3 / 4;
-parameter END_Y = V_DISP * 3 / 4;
-parameter OUTPUT_X_RES = H_DISP - 1;    //Resolution of output data minus 1
-parameter OUTPUT_Y_RES = V_DISP - 1;    //Resolution of output data minus 1
-
-//全屏缩小一倍
-//parameter START_X = 0;
-//parameter START_Y = 0;
-//parameter END_X = H_DISP;
-//parameter END_Y = V_DISP;
-//parameter OUTPUT_X_RES = H_DISP / 2 - 1;    //Resolution of output data minus 1
-//parameter OUTPUT_Y_RES = V_DISP / 2 - 1;    //Resolution of output data minus 1
-
-//自定义
-//reg [INPUT_X_RES_WIDTH-1:0] START_X = 96;
-//reg [INPUT_Y_RES_WIDTH-1:0] START_Y = 54;
-//reg [OUTPUT_X_RES_WIDTH-1:0] END_X  = 384;
-//reg [OUTPUT_Y_RES_WIDTH-1:0] END_Y  = 218;
+//parameter START_X = H_DISP / 4;
+//parameter START_Y = V_DISP / 4;
+//parameter END_X = H_DISP * 3 / 4;
+//parameter END_Y = V_DISP * 3 / 4;
 //parameter OUTPUT_X_RES = H_DISP - 1;    //Resolution of output data minus 1
 //parameter OUTPUT_Y_RES = V_DISP - 1;    //Resolution of output data minus 1
 
-reg Algorithm = 0; // 算法选择   0是双线性插值，1是邻近域
-//reg Algorithm = 1; // 算法选择   0是双线性插值，1是邻近域
+//全屏缩小一倍
+parameter START_X = 0;
+parameter START_Y = 0;
+parameter END_X = H_DISP;
+parameter END_Y = V_DISP;
+parameter OUTPUT_X_RES = H_DISP / 2 - 1;    //Resolution of output data minus 1
+parameter OUTPUT_Y_RES = V_DISP / 2 - 1;    //Resolution of output data minus 1
+
+//自定义
+//reg [INPUT_X_RES_WIDTH-1:0] START_X = 56;
+//reg [INPUT_Y_RES_WIDTH-1:0] START_Y = 12;
+//reg [OUTPUT_X_RES_WIDTH-1:0] END_X  = 215;
+//reg [OUTPUT_Y_RES_WIDTH-1:0] END_Y  = 158;
+//parameter OUTPUT_X_RES = H_DISP - 1;    //Resolution of output data minus 1
+//parameter OUTPUT_Y_RES = V_DISP - 1;    //Resolution of output data minus 1
+//reg [INPUT_X_RES_WIDTH-1:0] START_X = 0;
+//reg [INPUT_Y_RES_WIDTH-1:0] START_Y = 0;
+//reg [OUTPUT_X_RES_WIDTH-1:0] END_X  = H_DISP;
+//reg [OUTPUT_Y_RES_WIDTH-1:0] END_Y  = V_DISP;
+//parameter OUTPUT_X_RES = 253;    //Resolution of output data minus 1
+//parameter OUTPUT_Y_RES = 123;    //Resolution of output data minus 1
+
+//reg Algorithm = 0; // 算法选择   0是双线性插值，1是邻近域
+reg Algorithm = 1; // 算法选择   0是双线性插值，1是邻近域
 
 wire hs_i,vs_i,de_i;
 wire [DATA_WIDTH-1:0] rgb_r, rgb_g, rgb_b;

@@ -1,9 +1,7 @@
 `timescale 1ns / 1ps
 
 module fill_brank#(
-    parameter H_DISP = 12'd1920,
-    parameter INPUT_X_RES_WIDTH = 11,
-    parameter OUTPUT_X_RES_WIDTH = 11
+    parameter H_DISP = 12'd1920
 )(
     input wire clk,
     input wire [23:0] data_i,
@@ -17,10 +15,18 @@ localparam BLACK = 24'b0;
 reg [11:0] pixel_x = 0;
 reg [11:0] brank_cnt = 0;
 
-wire [11:0] brank_size = dataValid_i ? (H_DISP - pixel_x) : brank_size;
+//wire [11:0] brank_size = dataValid_i ? (H_DISP - pixel_x) : brank_size;
+reg [11:0] brank_size;
 wire fill_flag = brank_cnt < brank_size;
 assign dataValid_o = dataValid_i | fill_flag;
 assign data_o = dataValid_i ? data_i : BLACK;
+
+always @(*) begin
+	if (dataValid_i)
+		brank_size = H_DISP - pixel_x;
+	else
+		brank_size = brank_size;
+end
 
 always @(posedge clk) begin
 	if (dataValid_i)

@@ -1,20 +1,20 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/algorithm.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/algorithm.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module algorithm
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/color_bar.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/color_bar.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module color_bar
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/fifo2.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/fifo2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo2
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/new/fill_brank.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/new/fill_brank.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fill_brank
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/image_cut.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/image_cut.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module image_cut
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/pixel_cnt.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/pixel_cnt.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pixel_cnt
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/ramDualPort.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/ramDualPort.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ramDualPort
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/ramFifo.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/ramFifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ramFifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/streamScaler.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/algorithm/streamScaler.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module streamScaler
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Project_18.3/video_scaler3/video_scaler3.srcs/sources_1/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Project/FPAG/Vivado_18.3/video_scaler3/video_scaler3.srcs/sources_1/tb_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_top
